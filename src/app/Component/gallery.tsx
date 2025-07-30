@@ -114,6 +114,7 @@ export default function Gallery() {
             <Card
               key={index}
               className="group overflow-hidden hover:shadow-xl transition-all duration-300 max-w-full"
+              onClick={() => setSelectedProject(item)}
             >
               <div className="relative overflow-hidden">
                 <Image

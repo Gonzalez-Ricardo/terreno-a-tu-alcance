@@ -2,10 +2,11 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function Contacto() {
   const [state, handleSubmit] = useForm("xvgqryyp");
@@ -51,19 +52,22 @@ export default function Contacto() {
                   <Phone className="h-5 w-5 md:h-6 md:w-6 text-white" />
                 </div>
                 <div>
+                <Link href="tel:+52 466 212 6849" passHref>
                   <p className="font-semibold text-slate-900 text-sm md:text-base">
                     Teléfono
                   </p>
                   <p className="text-gray-600 text-sm md:text-base">
                     +52 (466) 212-6849
                   </p>
+                  </Link>
                 </div>
               </div>
 
               <div className="flex items-center">
                 <div className="bg-[#006837] p-2 md:p-3 rounded-lg mr-3 md:mr-4">
                   <Mail className="h-5 w-5 md:h-6 md:w-6 text-white" />
-                </div>
+                </div> 
+                <Link href="mailto:terrenoatualcance@gmail.com" passHref>
                 <div>
                   <p className="font-semibold text-slate-900 text-sm md:text-base">
                     Email
@@ -71,6 +75,23 @@ export default function Contacto() {
                   <p className="text-gray-600 text-sm md:text-base">
                     terrenoatualcance@gmail.com
                   </p>
+                </div>
+                </Link>
+              </div>
+
+              <div className="flex items-center">
+                <div className="bg-[#006837] p-2 md:p-3 rounded-lg mr-3 md:mr-4">
+                  <MessageCircle className="h-5 w-5 md:h-6 md:w-6 text-white" />
+                </div>
+                <div>
+                <Link href="https://wa.link/rdn46b" passHref>
+                  <p className="font-semibold text-slate-900 text-sm md:text-base">
+                    WhatsApp
+                  </p>
+                  <p className="text-gray-600 text-sm md:text-base">
+                    Contactanos por <b>WhatsApp aqui</b> 
+                  </p>
+                  </Link>
                 </div>
               </div>
 
