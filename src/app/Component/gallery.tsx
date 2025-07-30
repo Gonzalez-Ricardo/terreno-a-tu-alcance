@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar } from "lucide-react";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import imagen1 from "../../../public/Images/29.webp";
 import imagen2 from "../../../public/Images/14.webp";
 import imagen3 from "../../../public/Images/21.webp";
@@ -14,7 +15,16 @@ import imagen5 from "../../../public/Images/20.webp";
 import imagen6 from "../../../public/Images/42.webp";
 import imagen7 from "../../../public/Images/43.webp";
 
-const proyectos = [
+// ✅ Interfaz para tipar el proyecto
+interface Proyecto {
+  title: string;
+  image: StaticImageData;
+  description_c: string[];
+  description_m: string[];
+  fecha: string;
+}
+
+const proyectos: Proyecto[] = [
   {
     title: "Montaje de Puente Colgante",
     image: imagen1,
@@ -81,7 +91,7 @@ const proyectos = [
 ];
 
 export default function Gallery() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
 
   return (
     <section id="proyectos" className="py-12 md:py-20">
@@ -175,7 +185,6 @@ export default function Gallery() {
                 ))}
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                
                 <Button variant="outline" className="flex-1 bg-transparent" onClick={() => setSelectedProject(null)}>
                   Cerrar
                 </Button>
