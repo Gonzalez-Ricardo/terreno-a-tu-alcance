@@ -64,26 +64,24 @@ export function Inicio() {
             </div>
           </div>
 
-          <div className="relative mt-8 lg:mt-0 overflow-hidden">
-            <Image
-              src="/Images/43.webp"
-              alt="Casa americana en construcción"
-              width={800}
-              height={600}
-              className="rounded-lg shadow-2xl w-full max-w-full"
-            />
-            <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white text-slate-900 p-4 md:p-6 rounded-lg shadow-xl">
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Award className="h-8 w-8 md:h-12 md:w-12 text-[#006837]" />
-                <div>
-                  <p className="font-bold text-sm md:text-lg">Certificados</p>
-                  <p className="text-gray-600 text-xs md:text-base">
-                    Construcción Premium
-                  </p>
+          <div className="relative mt-8 lg:mt-0">
+              <Image
+                src="/Images/43.webp"
+                alt="Casa americana en construcción"
+                width={800}
+                height={600}
+                className="rounded-lg shadow-2xl w-full"
+              />
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white text-slate-900 p-4 md:p-6 rounded-lg shadow-xl">
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <Award className="h-8 w-8 md:h-12 md:w-12 text-[#006837]" />
+                  <div>
+                    <p className="font-bold text-sm md:text-lg">Certificados</p>
+                    <p className="text-gray-600 text-xs md:text-base">Construcción Premium</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
         </div>
       </div>

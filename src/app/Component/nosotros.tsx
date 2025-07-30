@@ -71,26 +71,26 @@ export default function Nosotros() {
             </div>
 
             <div className="relative">
-              <Image
-                src="/Images/40.webp"
-                alt=""
-                width={600}
-                height={500}
-                className="rounded-lg shadow-xl w-full"
-              />
-              <div className="absolute bottom-2 right-2 bg-[#6DBE45] p-4 rounded-lg shadow-lg">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-white">5+</p>
-                  <p className="text-sm text-white">Años de Tradición</p>
+                <Image
+                  src="/Images/40.webp"
+                  alt=""
+                  width={600}
+                  height={500}
+                  className="rounded-lg shadow-xl w-full"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-[#6DBE45] p-4 rounded-lg shadow-lg">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-white">5+</p>
+                    <p className="text-sm text-white">Años de Tradición</p>
+                  </div>
+                </div>
+                <div className="absolute -top-4 -left-4 bg-[#6DBE45] text-white p-4 rounded-lg shadow-lg">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold">200+</p>
+                    <p className="text-sm">Proyectos Completados</p>
+                  </div>
                 </div>
               </div>
-              <div className="absolute top-2 left-2 bg-[#6DBE45] text-white p-4 rounded-lg shadow-lg">
-                <div className="text-center">
-                  <p className="text-2xl font-bold">200+</p>
-                  <p className="text-sm">Proyectos Completados</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
