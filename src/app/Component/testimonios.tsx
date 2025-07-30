@@ -104,13 +104,13 @@ export default function Testimonios() {
                 </div>
                 <div className="relative mb-6">
                   <div className="text-6xl text-white absolute -top-4 -left-2 font-serif">
-                    "
+                    &quot;
                   </div>
                   <p className="text-gray-200 leading-relaxed italic text-lg relative z-10 pl-6">
                     {testimonial.content}
                   </p>
                   <div className="text-6xl text-white absolute -bottom-8 -right-2 font-serif rotate-180">
-                    "
+                    &quot;
                   </div>
                 </div>
                 <div className="flex items-center mt-8">
