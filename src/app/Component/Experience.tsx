@@ -7,7 +7,7 @@ export default function Experience() {
   const stats = [
     { value: 298, suffix: "+", label: "Casas Construidas" },
     { value: 5, suffix: "+", label: "Años de Experiencia" },
-    { value: 420, suffix: "+", label: "Muebles Fabricados" },
+    { value: 420, suffix: "+", label: "Inmobiliarios Completados" },
     { value: 98, suffix: "%", label: "Clientes Satisfechos" },
   ];
 

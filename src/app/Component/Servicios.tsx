@@ -61,7 +61,7 @@ export default function Experience() {
                 Inmobiliario Personalizado
               </h3>
               <p className="text-gray-600 mb-6">
-                Muebles hechos a medida con maderas nobles y diseños que
+                Inmobiliario  hechos a medida con maderas nobles y diseños que
                 complementan tu hogar.
               </p>
               <ul className="text-left space-y-2 text-gray-600">
@@ -75,7 +75,7 @@ export default function Experience() {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                  Muebles de sala y comedor
+                  Inmobiliario  de sala y comedor
                 </li>
               </ul>
             </CardContent>

@@ -144,7 +144,7 @@ export default function Nosotros() {
               {
                 icon: <CheckCircle className="h-8 w-8 text-white" />,
                 title: "Garantía Total",
-                desc: "Diseños a medida y muebles hechos por expertos",
+                desc: "Diseños a medida y Inmobiliario  hechos por expertos",
               },
               {
                 icon: <Calendar className="h-8 w-8 text-white" />,
