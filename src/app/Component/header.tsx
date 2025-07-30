@@ -12,14 +12,12 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center space-x-2 md:space-x-3">
             <Image
-              src="public/Images/Logo.png"
+              src="/Images/Logo.png"
               alt="Logo"
               height={100}
               width={100}
               className=""
-              style={{
-                objectFit: "cover",
-              }}
+              style={{ objectFit: "cover" }}
             />
 
             <div>
