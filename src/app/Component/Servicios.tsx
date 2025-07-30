@@ -5,23 +5,24 @@ import { Hammer, Home, Sofa, CheckCircle } from "lucide-react";
 
 export default function Experience() {
   return (
-    <section id="servicios" className="py-12 md:py-20 bg-gray-50">
+    <section id="servicios" className="py-12 md:py-20 bg-gray-50 overflow-x-hidden">
       <div className="container mx-auto px-4 py-9">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-16 px-4">
           <Badge className="bg-[#6DBE45] font-bold text-white mb-4 text-xs md:text-sm">
             Nuestros Servicios
           </Badge>
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4 px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
             Construcción y Inmobiliario de Calidad
           </h2>
-          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Ofrecemos servicios integrales desde la construcción de tu hogar
             hasta el mobiliario personalizado que lo hará único.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+          {/* Tarjeta 1 */}
+          <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg max-w-full">
             <CardContent className="p-8 text-center">
               <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#006837] transition-colors">
                 <Home className="h-8 w-8 text-white group-hover:text-white" />
@@ -50,7 +51,8 @@ export default function Experience() {
             </CardContent>
           </Card>
 
-          <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+          {/* Tarjeta 2 */}
+          <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg max-w-full">
             <CardContent className="p-8 text-center">
               <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#006837] transition-colors">
                 <Sofa className="h-8 w-8 text-white group-hover:text-white" />
@@ -79,7 +81,8 @@ export default function Experience() {
             </CardContent>
           </Card>
 
-          <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+          {/* Tarjeta 3 */}
+          <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg max-w-full">
             <CardContent className="p-8 text-center">
               <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#006837] transition-colors">
                 <Hammer className="h-8 w-8 text-white group-hover:text-white" />

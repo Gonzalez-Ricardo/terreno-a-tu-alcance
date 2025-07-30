@@ -94,16 +94,16 @@ export default function Gallery() {
   const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
 
   return (
-    <section id="proyectos" className="py-12 md:py-20">
+    <section id="proyectos" className="py-12 md:py-20 overflow-x-hidden">
       <div className="container mx-auto px-4 py-9">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-16 px-4">
           <Badge className="bg-[#6DBE45] text-white mb-4 text-xs md:text-sm">
             Nuestros Proyectos
           </Badge>
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4 px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
             Galería de Trabajos Realizados
           </h2>
-          <p className="text-base md:text-xl text-gray-600 px-4">
+          <p className="text-base md:text-xl text-gray-600">
             Cada proyecto refleja nuestro compromiso con la excelencia y el
             estilo de vida moderno.
           </p>
@@ -113,7 +113,7 @@ export default function Gallery() {
           {proyectos.map((item, index) => (
             <Card
               key={index}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group overflow-hidden hover:shadow-xl transition-all duration-300 max-w-full"
             >
               <div className="relative overflow-hidden">
                 <Image

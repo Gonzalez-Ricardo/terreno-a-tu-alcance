@@ -7,12 +7,12 @@ import Link from "next/link";
 
 export function Inicio() {
   return (
-    // Inicio de la pagina
     <section
       id="inicio"
-      className="realtive bg-gradient-to-r bg-[#6DBE45] text-white py-12 md:py-24"
+      className="relative bg-gradient-to-r bg-[#6DBE45] text-white py-12 md:py-24 overflow-x-hidden"
     >
       <div className="absolute inset-0"></div>
+
       <div className="container mx-auto px-4 py-9 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-center lg:text-left">
@@ -24,17 +24,15 @@ export function Inicio() {
               <span className="text-[#006837]"> Futuro </span>
             </h1>
             <p className="text-base md:text-xl text-white mb-6 md:mb-8 leading-relaxed px-4 lg:px-0">
-            En Soluciones Integrales, llevamos más de 5 años transformando ideas en espacios reales. Somos una empresa 100% mexicana especializada en construcción residencial y mobiliario personalizado, comprometidos con la calidad, el diseño y la funcionalidad.
-            Desde el primer trazo hasta el último detalle de decoración, construimos el futuro de tu patrimonio con profesionalismo, confianza y pasión.
+              En Soluciones Integrales, llevamos más de 5 años transformando ideas en espacios reales. Somos una empresa 100% mexicana especializada en construcción residencial y mobiliario personalizado, comprometidos con la calidad, el diseño y la funcionalidad.
+              Desde el primer trazo hasta el último detalle de decoración, construimos el futuro de tu patrimonio con profesionalismo, confianza y pasión.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 px-4 lg:px-0">
               <Button
                 onClick={() => {
                   const proyectos = document.getElementById("proyectos");
                   if (proyectos) {
-                    proyectos.scrollIntoView({
-                      behavior: "smooth",
-                    });
+                    proyectos.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
                 size="lg"
@@ -65,13 +63,14 @@ export function Inicio() {
               </Link>
             </div>
           </div>
-          <div className="relative mt-8 lg:mt-0">
+
+          <div className="relative mt-8 lg:mt-0 overflow-hidden">
             <Image
               src="/Images/43.webp"
               alt="Casa americana en construcción"
               width={800}
               height={600}
-              className="rounded-lg shadow-2xl w-full"
+              className="rounded-lg shadow-2xl w-full max-w-full"
             />
             <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white text-slate-900 p-4 md:p-6 rounded-lg shadow-xl">
               <div className="flex items-center space-x-3 md:space-x-4">
@@ -85,6 +84,7 @@ export function Inicio() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

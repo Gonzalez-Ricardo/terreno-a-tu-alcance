@@ -15,8 +15,8 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Nosotros() {
   return (
-    <section id="nosotros" className="py-12 md:py-20">
-      <div className="container mx-auto px-4  py-9">
+    <section id="nosotros" className="py-12 md:py-20 overflow-x-hidden">
+      <div className="container mx-auto px-4 py-9">
         <div className="mb-16">
           <div className="text-center mb-8">
             <Badge className="bg-[#6DBE45] text-white mb-4 text-xs md:text-sm">
@@ -78,13 +78,13 @@ export default function Nosotros() {
                 height={500}
                 className="rounded-lg shadow-xl w-full"
               />
-              <div className="absolute -bottom-4 -right-4 bg-[#6DBE45] p-4 rounded-lg shadow-lg">
+              <div className="absolute bottom-2 right-2 bg-[#6DBE45] p-4 rounded-lg shadow-lg">
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">5+</p>
                   <p className="text-sm text-white">Años de Tradición</p>
                 </div>
               </div>
-              <div className="absolute -top-4 -left-4 bg-[#6DBE45] text-white p-4 rounded-lg shadow-lg">
+              <div className="absolute top-2 left-2 bg-[#6DBE45] text-white p-4 rounded-lg shadow-lg">
                 <div className="text-center">
                   <p className="text-2xl font-bold">200+</p>
                   <p className="text-sm">Proyectos Completados</p>
@@ -121,6 +121,7 @@ export default function Nosotros() {
           </Card>
         </div>
 
+        {/* Diferenciadores */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
@@ -129,50 +130,42 @@ export default function Nosotros() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div className="text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-white" />
+            {[
+              {
+                icon: <Award className="h-8 w-8 text-white" />,
+                title: "Calidad Premium",
+                desc: "Materiales de alta calidad y acabados profesionales",
+              },
+              {
+                icon: <Users className="h-8 w-8 text-white" />,
+                title: "Equipo Experto",
+                desc: "Trato personalizado en cada etapa del proyecto",
+              },
+              {
+                icon: <CheckCircle className="h-8 w-8 text-white" />,
+                title: "Garantía Total",
+                desc: "Diseños a medida y muebles hechos por expertos",
+              },
+              {
+                icon: <Calendar className="h-8 w-8 text-white" />,
+                title: "Puntualidad",
+                desc: "Cumplimos tiempos de entrega y presupuesto acordado",
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {item.icon}
+                </div>
+                <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
-              <h4 className="font-bold text-slate-900 mb-2">Calidad Premium</h4>
-              <p className="text-gray-600 text-sm">
-                Materiales de alta calidad y acabados profesionales
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="font-bold text-slate-900 mb-2">Equipo Experto</h4>
-              <p className="text-gray-600 text-sm">
-                Trato personalizado en cada etapa del proyecto
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="font-bold text-slate-900 mb-2">Garantía Total</h4>
-              <p className="text-gray-600 text-sm">
-                Diseños a medida y muebles hechos por expertos
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="font-bold text-slate-900 mb-2">Puntualidad</h4>
-              <p className="text-gray-600 text-sm">
-                Cumplimos tiempos de entrega y presupuesto acordado
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>
+
       {/* Valores */}
-      <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
+      <div className="bg-gray-50 rounded-2xl p-8 md:p-12 overflow-hidden">
         <div className="text-center mb-12">
           <h3 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">
             Nuestros Valores
@@ -184,83 +177,53 @@ export default function Nosotros() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-6 text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
-                <CheckCircle className="h-8 w-8 text-white group-hover:text-white" />
-              </div>
-              <h4 className="font-bold mb-3 text-slate-900">Integridad</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Actuamos con honestidad y transparencia en cada proyecto y
-                relación comercial.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-6 text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
-                <Star className="h-8 w-8 text-white group-hover:text-white" />
-              </div>
-              <h4 className="font-bold mb-3 text-slate-900">Excelencia</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Buscamos la perfección en cada detalle, desde el diseño hasta la
-                entrega final.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-6 text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
-                <Users className="h-8 w-8 text-white group-hover:text-white" />
-              </div>
-              <h4 className="font-bold mb-3 text-slate-900">Responsabilidad</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Cumplimos nuestros compromisos y asumimos la responsabilidad de
-                nuestro trabajo.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-6 text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
-                <Award className="h-8 w-8 text-white group-hover:text-white" />
-              </div>
-              <h4 className="font-bold mb-3 text-slate-900">Innovación</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Incorporamos las últimas tecnologías y tendencias en
-                construcción y diseño.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-6 text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
-                <Heart className="h-8 w-8 text-white group-hover:text-white" />
-              </div>
-              <h4 className="font-bold mb-3 text-slate-900">Compromiso</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Nos dedicamos completamente a hacer realidad la visión de cada
-                cliente.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-6 text-center">
-              <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
-                <Hammer className="h-8 w-8 text-white group-hover:text-white" />
-              </div>
-              <h4 className="font-bold mb-3 text-slate-900">Artesanía</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Valoramos el trabajo manual de calidad y la atención a los
-                detalles tradicionales.
-              </p>
-            </CardContent>
-          </Card>
+          {[
+            {
+              icon: <CheckCircle className="h-8 w-8 text-white" />,
+              title: "Integridad",
+              desc: "Actuamos con honestidad y transparencia en cada proyecto y relación comercial.",
+            },
+            {
+              icon: <Star className="h-8 w-8 text-white" />,
+              title: "Excelencia",
+              desc: "Buscamos la perfección en cada detalle, desde el diseño hasta la entrega final.",
+            },
+            {
+              icon: <Users className="h-8 w-8 text-white" />,
+              title: "Responsabilidad",
+              desc: "Cumplimos nuestros compromisos y asumimos la responsabilidad de nuestro trabajo.",
+            },
+            {
+              icon: <Award className="h-8 w-8 text-white" />,
+              title: "Innovación",
+              desc: "Incorporamos las últimas tecnologías y tendencias en construcción y diseño.",
+            },
+            {
+              icon: <Heart className="h-8 w-8 text-white" />,
+              title: "Compromiso",
+              desc: "Nos dedicamos completamente a hacer realidad la visión de cada cliente.",
+            },
+            {
+              icon: <Hammer className="h-8 w-8 text-white" />,
+              title: "Artesanía",
+              desc: "Valoramos el trabajo manual de calidad y la atención a los detalles tradicionales.",
+            },
+          ].map((item, i) => (
+            <Card
+              key={i}
+              className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <CardContent className="p-6 text-center">
+                <div className="bg-[#6DBE45] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#006837] transition-colors">
+                  {item.icon}
+                </div>
+                <h4 className="font-bold mb-3 text-slate-900">{item.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

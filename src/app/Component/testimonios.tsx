@@ -7,14 +7,16 @@ export default function Testimonios() {
   return (
     <section
       id="testimonios"
-      className="py-20 bg-gradient-to-br bg-[#006837] text-white relative overflow-hidden"
+      className="py-20 bg-gradient-to-br bg-[#006837] text-white relative overflow-hidden overflow-x-hidden"
     >
-      <div className="absolute inset-0 opacity-10">
+      {/* Elementos decorativos en segundo plano */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
         <div className="absolute bottom-20 right-10 w-24 h-24 border border-white/20 rounded-full"></div>
         <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
       </div>
 
+      {/* Contenido principal */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <Badge className="bg-[#6DBE45] text-white mb-4 text-sm">
@@ -91,7 +93,7 @@ export default function Testimonios() {
           ].map((testimonial, index) => (
             <Card
               key={index}
-              className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/15 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/15 transition-all duration-300 group max-w-full relative"
             >
               <CardContent className="p-8">
                 <div className="flex mb-6 justify-center">
@@ -136,27 +138,28 @@ export default function Testimonios() {
             </Card>
           ))}
         </div>
+
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="group">
-            <div className="text-3xl md:text-4xl font-bold text-white  mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
               4.9/5
             </div>
             <p className="text-gray-300 text-sm">Calificación Promedio</p>
           </div>
           <div className="group">
-            <div className="text-3xl md:text-4xl font-bold text-white  mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
               250+
             </div>
             <p className="text-gray-300 text-sm">Clientes Satisfechos</p>
           </div>
           <div className="group">
-            <div className="text-3xl md:text-4xl font-bold text-white  mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
               98%
             </div>
             <p className="text-gray-300 text-sm">Recomendación</p>
           </div>
           <div className="group">
-            <div className="text-3xl md:text-4xl font-bold text-white  mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
               5+
             </div>
             <p className="text-gray-300 text-sm">Años de Experiencia</p>

@@ -12,8 +12,8 @@ export default function Experience() {
   ];
 
   return (
-    <section className="bg-[#006837] text-white py-12 md:py-16">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-[#006837] text-white py-12 md:py-16 overflow-x-hidden">
+      <div className="max-w-4xl mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index}>

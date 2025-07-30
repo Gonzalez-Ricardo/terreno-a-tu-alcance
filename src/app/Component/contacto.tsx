@@ -25,7 +25,7 @@ export default function Contacto() {
   }
 
   return (
-    <section id="contacto" className="py-12 md:py-20 bg-gray-50">
+    <section id="contacto" className="py-12 md:py-20 bg-gray-50 overflow-x-hidden">
       <div className="container mx-auto px-4 py-9">
         <div className="text-center mb-12 md:mb-16">
           <Badge className="bg-[#6DBE45] text-white mb-4 text-xs md:text-sm">
@@ -102,18 +102,15 @@ export default function Contacto() {
           </div>
 
           {/* Formulario */}
-          <Card id="form" className="shadow-xl">
-            <CardContent className="p-6 md:p-8 py-9">
+          <Card id="form" className="shadow-xl w-full max-w-full">
+            <CardContent className="p-6 md:p-8">
               <h3 className="text-xl md:text-2xl font-bold mb-6 text-slate-900">
                 Solicita tu Cotización
               </h3>
               <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Nombre
                     </label>
                     <Input
@@ -122,17 +119,10 @@ export default function Contacto() {
                       placeholder="Tu nombre completo"
                       className="text-sm md:text-base"
                     />
-                    <ValidationError
-                      prefix="Name"
-                      field="name"
-                      errors={state.errors}
-                    />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} />
                   </div>
                   <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Teléfono
                     </label>
                     <Input
@@ -141,19 +131,12 @@ export default function Contacto() {
                       placeholder="Tu número de teléfono"
                       className="text-sm md:text-base"
                     />
-                    <ValidationError
-                      prefix="Phone"
-                      field="phone"
-                      errors={state.errors}
-                    />
+                    <ValidationError prefix="Phone" field="phone" errors={state.errors} />
                   </div>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email
                   </label>
                   <Input
@@ -163,18 +146,11 @@ export default function Contacto() {
                     placeholder="tu@email.com"
                     className="text-sm md:text-base"
                   />
-                  <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                  />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="proyect"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="proyect" className="block text-sm font-medium text-gray-700 mb-2">
                     Tipo de Proyecto
                   </label>
                   <select
@@ -190,10 +166,7 @@ export default function Contacto() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Mensaje
                   </label>
                   <Textarea
@@ -203,11 +176,7 @@ export default function Contacto() {
                     rows={4}
                     className="text-sm md:text-base"
                   />
-                  <ValidationError
-                    prefix="Message"
-                    field="message"
-                    errors={state.errors}
-                  />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
                 </div>
 
                 <Button
