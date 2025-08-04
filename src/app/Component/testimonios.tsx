@@ -126,7 +126,7 @@ export default function Testimonios() {
                   </div>
                   <div className="ml-4 flex-1">
                     <p className="font-bold text-lg">{testimonial.name}</p>
-                    <p className="text-green-500 text-sm font-medium">
+                    <p className="text-[#58fa20] text-sm font-medium">
                       {testimonial.role}
                     </p>
                   </div>

@@ -78,7 +78,7 @@ export function Header() {
           </nav>
 
           <Button className="hidden md:block bg-[#6DBE45] hover:bg-[#58fa20]">
-            <a href="#contacto">Cotización Gratis</a>
+            <a href="#contacto"><b>Cotización Gratis</b></a>
           </Button>
         </div>
       </div>
