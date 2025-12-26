@@ -15,9 +15,9 @@ export function Header() {
             <Image
               src="/Images/Logo.PNG"
               alt="Logo"
-              width={60}
-              height={60}
-              className="w-12 h-auto md:w-16"
+              width={70}
+              height={70}
+              className="w-23 h-auto md:w-30"
               priority
             />
             <div>

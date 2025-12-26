@@ -30,8 +30,8 @@ export default function Nosotros() {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <p className="text-base md:text-xl text-gray-600 leading-relaxed mb-6">
-                Desde nuestra fundación en 2019, en Soluciones Integrales S.A.
-                de C.V. hemos construido más que casas: hemos edificado
+                Desde nuestra fundación en 2019, en <b> Terreno A Tu Alcance Soluciones Integrales S.A.
+                de C.V. </b> hemos construido más que casas: hemos edificado
                 confianza, seguridad y bienestar para decenas de familias y
                 empresas que buscan calidad en cada detalle.
               </p>
